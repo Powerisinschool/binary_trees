@@ -1,16 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * height - Subfunction used to avoid top level addition
- * else top function would be enough :)
- *
- * @node: Node
- *
- * Return: 1 if node
-*/
-size_t height(const binary_tree_t *node);
-
-/**
  * binary_tree_height - Find the height of a binary tree
  *
  * @tree: Pointer to the root node of tree
@@ -28,6 +18,14 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (height(tree->right));
 }
 
+/**
+ * height - Subfunction used to avoid top level addition
+ * else top function would be enough :)
+ *
+ * @node: Node
+ *
+ * Return: 1 if node
+*/
 size_t height(const binary_tree_t *node)
 {
 	if (!node)
