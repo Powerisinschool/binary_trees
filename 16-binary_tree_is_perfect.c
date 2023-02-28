@@ -1,5 +1,12 @@
 #include "binary_trees.h"
 
+/**
+ * binary_tree_is_perfect - Check if a binary tree node is perfect
+ *
+ * @tree: Pointer to root node
+ *
+ * Return: 1 if perfect, otherwise 0 (int)
+*/
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (!tree)
