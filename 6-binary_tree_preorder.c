@@ -4,7 +4,7 @@
 /**
  * binary_tree_preorder - Traverse through a binary tree by pre-order
  *
- * @tree: binary_tree_t * (pointer to the node)
+ * @tree: const binary_tree_t * (pointer to the node)
  * @func: function to run
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
