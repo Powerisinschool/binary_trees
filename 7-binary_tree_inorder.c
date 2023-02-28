@@ -9,7 +9,7 @@
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
 	binary_tree_t *node;
-	if (tree == NULL)
+	if (!tree || !func)
 		return;
 
 	node = (binary_tree_t *) tree;
