@@ -1,24 +1,19 @@
 #include <stdio.h>
 #include "binary_trees.h"
 
-void print_node(binary_tree_t *node, void (*func)(int));
-
+/**
+ * binary_tree_preorder - Prints a binary tree by preorder
+ *
+ * @tree: binary_tree_t * (pointer to the node)
+ * @func: Print function
+ */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
-	if (tree == NULL)
+	if (!tree)
 		return;
 
-	(void) func;
-
-	print_node((binary_tree_t *) tree, func);
-}
-
-void print_node(binary_tree_t *node, void (*func)(int))
-{
-	if (node == NULL)
-		return;
-
-	func(node->n);
-	print_node(node->left, func);
-	print_node(node->right, func);
+	func(tree->n);
+	binary_tree_preorder(tree->left, func);
+	binary_tree_preorder(tree->right, func);
+	
 }
